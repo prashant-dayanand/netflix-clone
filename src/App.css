@@ -1,38 +1,154 @@
-.App {
-  text-align: center;
+.row h2 {
+  color: white;
+  margin: 1.3em;
+  font-size: 1.7rem;
+}
+.img-card {
+  display: flex;
+  overflow-y: hiddens;
+  overflow-x: scroll;
+  cursor: pointer;
+  padding: 2em 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.img-card::-webkit-scrollbar {
+  /* display: none; */
+}
+.img-card::-webkit-scrollbar {
+  width: 20px !important;
+  height: 3px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Track */
+.img-card::-webkit-scrollbar-track {
+  background: #000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Handle */
+.img-card::-webkit-scrollbar-thumb {
+  background: #111;
+}
+
+/* Handle on hover */
+.img-card::-webkit-scrollbar-thumb:hover {
+  background: #111;
+}
+.banner {
+  height: 600px !important;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+.banner-btn {
+  margin-top: 1.5em;
+}
+
+.play-btn {
+  padding: 0.5em 1.5em;
+  border: 2px solid white;
+  margin-right: 1em;
   color: white;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: system-ui;
+  border-radius: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.play-btn:hover {
+  background: white;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar {
+  position: fixed;
+  top: 0;
+  padding: 1em 2em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 22;
+  transition: all 1s ease-in;
+}
+
+.logo img {
+  width: 100px;
+}
+.fa-user {
+  color: white;
+  margin-left: auto !important;
+}
+
+.list-btn {
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+.banner-content {
+  height: 100%;
+  padding: 12em 2em;
+  color: white;
+  width: 79%;
+}
+
+.nav-black {
+  background: black;
+  transition: all 1s ease-in;
+}
+
+.banner-content h2 {
+  font-size: 3rem;
+  margin-bottom: 0.3em;
+}
+
+.banner-content p {
+  font-size: 1.4rem;
+  margin-bottom: 0.3em;
+}
+.poster {
+  width: 220px;
+  object-fit: contain;
+  margin: 0.3em;
+  transition: transform 1000ms;
+}
+
+.poster:hover {
+  transform: scale(1.2);
+}
+
+.banner-fade {
+  height: 15rem;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(0, 0, 0, 0.6),
+    #000
+  );
+}
+
+.footer {
+  background: black;
+  padding: 5em;
+}
+
+.footer h3, .footer p {
+  color: #555;
+}
+
+.footer-box {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2em 0;
+
+}
+.footer-item {
+  display: flex;
+  flex-direction: column;
+}
+.footer-item a{
+  color: #666;
+  text-decoration: none;
+  margin-bottom: .3em;
 }
